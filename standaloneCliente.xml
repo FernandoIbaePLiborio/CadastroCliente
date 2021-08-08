@@ -1,0 +1,13 @@
+<datasource jndi-name="java:jboss/ProjectClient" pool-name="ProjectClient" enabled="true" use-java-context="true">
+    <connection-url>jdbc:oracle:thin:@localhost:1521/xe</connection-url>
+    <driver>oracle</driver>
+    <security>
+        <user-name>liborio</user-name>
+        <password>liborio</password>
+    </security>
+</datasource>
+<drivers>
+    <driver name="oracle" module="com.oracle">
+        <xa-datasource-class>oracle.jdbc.xa.client.OracleXADataSource</xa-datasource-class>
+    </driver>
+</drivers>
