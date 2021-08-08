@@ -49,13 +49,5 @@ Server -> Standalone Wildfly -> wildfly-10.1.0.Final -> Configurações
 
 Obs -> Drive ojdbc8-12.2.0.1.jar
 -----------------------------------------------------------------------------------------------------------------------------------
-<module xmlns="urn:jboss:module:1.1" name="com.oracle">
-  <resources>
-    <resource-root path="ojdbc8-12.2.0.1.jar"/>
-  </resources>
-  <dependencies>
-    <module name="javax.api"/>
-    <module name="javax.transaction.api"/>
-  </dependencies>
-</module>
+Documento das Requisições do serviço em Doc_Service.docx encontrado neste mesmo diretório.
 -----------------------------------------------------------------------------------------------------------------------------------
