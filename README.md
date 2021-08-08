@@ -12,7 +12,7 @@ Server -> Standalone Wildfly -> wildfly-10.1.0.Final -> Configurações Em arqui
 -----------------------------------------------------------------------------------------------------------------------------------
 
 Documento das Requisições do serviço 
-https://github.com/FernandoIbaePLiborio/CadastroCliente/blob/main/Doc_Service.docx
+* https://github.com/FernandoIbaePLiborio/CadastroCliente/blob/main/Doc_Service.docx
 -----------------------------------------------------------------------------------------------------------------------------------
 
 * Dependências-> https://github.com/FernandoIbaePLiborio/CadastroCliente/blob/main/Cliente/pom.xml
