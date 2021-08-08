@@ -1,7 +1,6 @@
 # CadastroCliente
 
 -----------------------------------------------------------------------------------------------------------------------------------
-
 Documento Técnico Back - End -> Java jdk 1.8 -> Jersey Rest -> JPA -> Drive ojdbc8-12.2.0.1.jar
 -----------------------------------------------------------------------------------------------------------------------------------
 
@@ -12,7 +11,7 @@ Server -> Standalone Wildfly -> wildfly-10.1.0.Final ->
 * https://github.com/FernandoIbaePLiborio/CadastroCliente/blob/main/standaloneCliente.xml
 -----------------------------------------------------------------------------------------------------------------------------------
 
-Documento das Requisições do serviço 
+Contrato REST
 * https://github.com/FernandoIbaePLiborio/CadastroCliente/blob/main/Doc_Service.docx
 -----------------------------------------------------------------------------------------------------------------------------------
 
