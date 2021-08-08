@@ -14,5 +14,5 @@ Server -> Standalone Wildfly -> wildfly-10.1.0.Final -> Configurações Em arqui
 Documento das Requisições do serviço em Doc_Service.docx encontrado neste mesmo diretório.
 -----------------------------------------------------------------------------------------------------------------------------------
 
-***Demais configurações -> dependências pom.xml -> pasta projeto Java. 
+* Dependências-> https://github.com/FernandoIbaePLiborio/CadastroCliente/blob/main/Cliente/pom.xml
 -----------------------------------------------------------------------------------------------------------------------------------
