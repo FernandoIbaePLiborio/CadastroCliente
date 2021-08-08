@@ -8,7 +8,8 @@ Documento Técnico Back - End -> Java jdk 1.8 -> Jersey Rest -> JPA -> Drive ojd
 * CLIENTE_SCRIPT.SQL https://github.com/FernandoIbaePLiborio/CadastroCliente/blob/main/CLIENTE_SCRIPT.SQL
 -----------------------------------------------------------------------------------------------------------------------------------
 
-Server -> Standalone Wildfly -> wildfly-10.1.0.Final -> Configurações Em arquivo standaloneCliente.xml neste diretório
+Server -> Standalone Wildfly -> wildfly-10.1.0.Final -> 
+* https://github.com/FernandoIbaePLiborio/CadastroCliente/blob/main/standaloneCliente.xml
 -----------------------------------------------------------------------------------------------------------------------------------
 
 Documento das Requisições do serviço 
