@@ -5,7 +5,7 @@
 Documento Técnico Back - End -> Java jdk 1.8 -> Jersey Rest -> JPA -> Drive ojdbc8-12.2.0.1.jar
 -----------------------------------------------------------------------------------------------------------------------------------
 
---Feature Cadastro Cliente CLIENTE_SCRIPT.SQL neste diretório.
+* CLIENTE_SCRIPT.SQL https://github.com/FernandoIbaePLiborio/CadastroCliente/blob/main/CLIENTE_SCRIPT.SQL
 -----------------------------------------------------------------------------------------------------------------------------------
 
 Server -> Standalone Wildfly -> wildfly-10.1.0.Final -> Configurações Em arquivo standaloneCliente.xml neste diretório
