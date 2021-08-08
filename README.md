@@ -11,7 +11,8 @@ Documento Técnico Back - End -> Java jdk 1.8 -> Jersey Rest -> JPA -> Drive ojd
 Server -> Standalone Wildfly -> wildfly-10.1.0.Final -> Configurações Em arquivo standaloneCliente.xml neste diretório
 -----------------------------------------------------------------------------------------------------------------------------------
 
-Documento das Requisições do serviço em Doc_Service.docx encontrado neste mesmo diretório.
+Documento das Requisições do serviço 
+https://github.com/FernandoIbaePLiborio/CadastroCliente/blob/main/Doc_Service.docx
 -----------------------------------------------------------------------------------------------------------------------------------
 
 * Dependências-> https://github.com/FernandoIbaePLiborio/CadastroCliente/blob/main/Cliente/pom.xml
