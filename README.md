@@ -19,3 +19,5 @@ Contrato REST
 -----------------------------------------------------------------------------------------------------------------------------------
 
 * Front End em master -> https://github.com/FernandoIbaePLiborio/CadastroCliente/tree/master
+
+* Diretivas | Cenários -> https://github.com/FernandoIbaePLiborio/CadastroCliente/blob/main/DocFrontEnd.txt.docx
