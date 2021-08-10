@@ -8,6 +8,7 @@ import { TemplateModule } from './template/template.module';
 import { HomeComponent } from './home/home.component'
 import { ClienteModule } from './cliente/cliente.module';
 import { FooterComponent } from './footer/footer.component';
+import { NgxMaskModule } from 'ngx-mask';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,10 @@ import { FooterComponent } from './footer/footer.component';
     HttpClientModule,
     AppRoutingModule,
     TemplateModule,
-    ClienteModule
+    ClienteModule,
+    NgxMaskModule.forRoot({
+      dropSpecialCharacters: false
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

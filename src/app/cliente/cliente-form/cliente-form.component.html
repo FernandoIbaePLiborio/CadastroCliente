@@ -26,23 +26,23 @@
             <div class="col-md-6">
                 <div class="form-group">
                     <label>CPF *</label>
-                    <input type="text" class="form-control" [(ngModel)]="cliente.cpf" name="cpf"/>
+                    <input type='text' [dropSpecialCharacters]="false" mask="000.000.000-00" class="form-control" [(ngModel)]="cliente.cpf" name="cpf">
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="form-group">
                     <label>Telefone *</label>
-                    <input type="text" class="form-control" [(ngModel)]="cliente.telefone" name="telefone" />
+                    <input type='text' [dropSpecialCharacters]="false" mask="(00) 0000-0000 || (00) 00000-0000" class="form-control" class="form-control" [(ngModel)]="cliente.telefone" name="telefone">
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-2">
+            <div class="col-md-6">
                 <button type="submit" class="btn btn-success">
                     <i class="fas fa-save"></i>  Salvar
                 </button>
             </div>
-            <div class="col-md-2">
+            <div class="col-md-6" style="float: right;">
                 <button type="button" class="btn btn-info" (click)=voltar()>
                     <i class="fas fa-arrow-alt-circle-left"></i>  Voltar
                 </button>

@@ -4,6 +4,7 @@ import { ClienteRoutingModule } from './cliente-routing.module';
 import { ClienteFormComponent } from './cliente-form/cliente-form.component';
 import { FormsModule } from '@angular/forms';
 import { ClientesComponent } from './clientes/clientes.component';
+import { NgxMaskModule } from 'ngx-mask';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { ClientesComponent } from './clientes/clientes.component';
   imports: [
     CommonModule,
     ClienteRoutingModule,
-    FormsModule
+    FormsModule,
+    NgxMaskModule.forChild()
   ],
   exports: [
     ClienteFormComponent,
