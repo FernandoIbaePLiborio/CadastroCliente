@@ -40,6 +40,5 @@ export class ClienteFormComponent implements OnInit {
 
   limpar() {
     this.cliente = new Cliente();
-    this.message = "";
   }
 }
