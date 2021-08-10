@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ClienteService } from 'src/app/cliente.service';
 import { Cliente } from '../cliente';
 
@@ -13,7 +14,7 @@ export class ClienteFormComponent implements OnInit {
 
   success: boolean;
   message: string;
-  constructor(private service : ClienteService) {
+  constructor(private service : ClienteService, private router : Router) {
     this.cliente = new Cliente();
   }
 
@@ -23,18 +24,17 @@ export class ClienteFormComponent implements OnInit {
     this.service.salvar(this.cliente)
       .subscribe(response => {
         console.log(response);
-        if(response.ok) {
-          this.success = response.ok;
-          this.message = response.mensagem;
-        } else {
-          this.success = response.ok;
-          this.message = response.mensagem;
-        }
+        this.success = response.ok;
+        this.message = response.mensagem;
       }, error => {
         console.log(error)
         this.message = error;
       }
     )
+  }
+
+  voltar() {
+    this.router.navigate(['/clientes'])
   }
 
 }

@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Cliente } from './cliente/cliente';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { ClienteColecao } from './cliente/clienteColecao';
 
 @Injectable({
   providedIn: 'root'
@@ -9,6 +10,7 @@ import { Observable } from 'rxjs';
 export class ClienteService {
 
   cliente: Cliente;
+  clientes: ClienteColecao[];
 
   constructor(private http: HttpClient) { }
 
@@ -16,9 +18,9 @@ export class ClienteService {
     console.log(cliente)
     return this.http.post<Cliente>('http://localhost:8081/Cliente-0.0.1/WS/Cliente/Criar', cliente);
   }
-
-  pesquisar(cliente: Cliente) : Observable<Cliente> {
-    return this.http.post<Cliente>('http://localhost:8081/Cliente-0.0.1/WS/Cliente/Criar', cliente);
-  }
+  
+  pesquisar() : Observable<Cliente> {
+    return this.http.get<Cliente>('http://localhost:8081/Cliente-0.0.1/WS/Cliente/Pesquisar')
+  } 
 
 }
