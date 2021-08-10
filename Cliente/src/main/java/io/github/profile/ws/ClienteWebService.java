@@ -12,6 +12,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 
 import io.github.profile.controller.ClienteController;
 import io.github.profile.dao.exeption.BusinessException;
@@ -24,7 +25,6 @@ import io.github.profile.vo.ClienteVO;
 public class ClienteWebService implements Serializable {
 
 	private static final long serialVersionUID = -5346074283140334199L;
-
 	
 	private ClienteController clienteController = new ClienteController();
 	
@@ -40,7 +40,7 @@ public class ClienteWebService implements Serializable {
 	@GET
 	@Path("/Pesquisar")
 	@Produces(MediaType.APPLICATION_JSON)
-	public ClienteVO pesquisar() throws BusinessException {
+	public ClienteVO pesquisar() {
 		
 		return clienteController.pesquisar();
 	}
@@ -48,17 +48,28 @@ public class ClienteWebService implements Serializable {
 	@GET
     @Path("/BuscarCliente/{cpf}")
     @Produces(MediaType.APPLICATION_JSON)
-    public ClienteVO buscarCliente(@PathParam("cpf") String cpf) throws BusinessException {
+    public ClienteVO buscarCliente(@PathParam("cpf") String cpf) {
 		
-        return clienteController.buscarCliente(cpf);
+		return clienteController.buscarCliente(cpf);
     }
 	
 	@DELETE
     @Path("/deletar/{id}")
     @Produces(MediaType.APPLICATION_JSON)
-    public ClienteVO deletarCliente(@PathParam("id") Long id) throws BusinessException {
+    public ClienteVO deletarCliente(@PathParam("id") Long id) {
 		
-        return clienteController.deletarCliente(id);
+		return clienteController.deletarCliente(id);
     }
+	
+	public void security(Cliente cliente) {
+		Response.status(200)
+        .header("Access-Control-Allow-Origin", "*")
+        .header("Access-Control-Allow-Headers", "origin, content-type, accept, authorization")
+        .header("Access-Control-Allow-Credentials", "true")
+        .header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS, HEAD")
+        .header("Access-Control-Max-Age", "1209600")
+        .entity(cliente)
+        .build();
+	}
 	
 }

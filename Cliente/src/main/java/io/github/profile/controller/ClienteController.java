@@ -33,7 +33,7 @@ public class ClienteController {
 			this.clienteService.salvar(cliente);
 		} catch (Exception e) {	
 			LOGGER.error(e);
-			return new ClienteVO(true, e.getMessage());
+			return new ClienteVO(false, e.getMessage());
 		}
 		return new ClienteVO(true, "Cliente inserido com sucesso: ".concat(cliente.getNome()));
 	}
@@ -47,7 +47,7 @@ public class ClienteController {
 			return clienteVO;
 		} catch (BusinessException e) {
 			LOGGER.error(e);
-			return new ClienteVO(true, e.getMessage());
+			return new ClienteVO(false, e.getMessage());
 		}
 	}
 	
@@ -65,7 +65,7 @@ public class ClienteController {
 			return clienteVO;
 		} catch (BusinessException e) {
 			LOGGER.error(e);
-			return new ClienteVO(true, e.getMessage());
+			return new ClienteVO(false, e.getMessage());
 		}
 	}
 
@@ -73,11 +73,11 @@ public class ClienteController {
 		try {
 			
 			this.clienteService.delete(id);
+			return new ClienteVO(true, "Cliente excluído com sucesso");
 		} catch (Exception e) {	
 			LOGGER.error(e);
-			return new ClienteVO(true, e.getMessage());
+			return new ClienteVO(false, e.getMessage());
 		}
-		return new ClienteVO(true, "Cliente excluído com sucesso");
 	}
 	
 }

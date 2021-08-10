@@ -39,20 +39,6 @@ public class ClienteServiceImpl implements ClienteService {
 		}
 	}
 		
-	private void validarCliente(final Cliente cliente) throws CampoNaoInformadoException, CampoExcedeLimiteException, CamposObrigatoriosException {
-		
-		if(Objects.isNull(cliente)) {
-			
-			throw new CampoNaoInformadoException("CPF");
-		}
-		if(!Objects.isNull(cliente.getCpf()) && cliente.getCpf().length() > 11) {
-			throw new CampoExcedeLimiteException("CPF");
-		}
-		if (Objects.isNull(cliente.getCpf()) || Objects.isNull(cliente.getNome()) || Objects.isNull(cliente.getTelefone())) {
-			throw new CamposObrigatoriosException();
-		}
-	}
-
 	public Collection<Cliente> pesquisar() throws BusinessException {
 		
 		try {
@@ -79,6 +65,22 @@ public class ClienteServiceImpl implements ClienteService {
 				this.dao.delete(id);
 		} catch (final DAOException e) {
 			throw new BusinessException(e) ;
+		}
+	}
+	
+	private void validarCliente(final Cliente cliente) throws CampoNaoInformadoException, CampoExcedeLimiteException, CamposObrigatoriosException {
+		
+		if(Objects.isNull(cliente)) {
+			
+			throw new CampoNaoInformadoException();
+		}
+		if(!Objects.isNull(cliente.getCpf()) && (cliente.getCpf().length() > 11 || cliente.getTelefone().length() > 11)) {
+			
+			throw new CampoExcedeLimiteException();
+		}
+		if (Objects.isNull(cliente.getCpf()) || Objects.isNull(cliente.getNome()) || Objects.isNull(cliente.getTelefone())) {
+			
+			throw new CamposObrigatoriosException();
 		}
 	}
 
