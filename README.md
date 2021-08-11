@@ -9,14 +9,14 @@
 
 -----------------------------------------------------------------------------------------------------------------------------------
 * Server -> [Standalone Wildfly](https://github.com/FernandoIbaePLiborio/CadastroCliente/blob/main/standaloneCliente.xml) 
-* [Contrato REST] (https://github.com/FernandoIbaePLiborio/CadastroCliente/blob/main/Doc_Service.docx) 
-* [Dependências] (https://github.com/FernandoIbaePLiborio/CadastroCliente/blob/main/Cliente/pom.xml) 
+* [Contrato REST](https://github.com/FernandoIbaePLiborio/CadastroCliente/blob/main/Doc_Service.docx) 
+* [Dependências](https://github.com/FernandoIbaePLiborio/CadastroCliente/blob/main/Cliente/pom.xml) 
 
 -----------------------------------------------------------------------------------------------------------------------------------
 ### Front-End -> 
 -----------------------------------------------------------------------------------------------------------------------------------
-* [Front End Master] -> (https://github.com/FernandoIbaePLiborio/CadastroCliente/tree/master)  
-* [Diretivas | Cenários] -> (https://github.com/FernandoIbaePLiborio/CadastroCliente/blob/main/DocFrontEnd.txt.docx)
+* [Front End Master](https://github.com/FernandoIbaePLiborio/CadastroCliente/tree/master)  
+* [Diretivas | Cenários](https://github.com/FernandoIbaePLiborio/CadastroCliente/blob/main/DocFrontEnd.txt.docx)
 
 -----------------------------------------------------------------------------------------------------------------------------------
 * ![Angular](https://github.com/FernandoIbaePLiborio/CadastroCliente/blob/main/front.gif)
