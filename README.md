@@ -8,7 +8,7 @@
 * [CLIENTE_SCRIPT.SQL](https://github.com/FernandoIbaePLiborio/CadastroCliente/blob/main/CLIENTE_SCRIPT.SQL)   
 
 -----------------------------------------------------------------------------------------------------------------------------------
-* Server -> [Standalone Wildfly](https://github.com/FernandoIbaePLiborio/CadastroCliente/blob/main/standaloneCliente.xml) 
+* Server - [Standalone Wildfly](https://github.com/FernandoIbaePLiborio/CadastroCliente/blob/main/standaloneCliente.xml) 
 * [Contrato REST](https://github.com/FernandoIbaePLiborio/CadastroCliente/blob/main/Doc_Service.docx) 
 * [Dependências](https://github.com/FernandoIbaePLiborio/CadastroCliente/blob/main/Cliente/pom.xml) 
 
