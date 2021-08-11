@@ -19,7 +19,7 @@
 * [Diretivas | Cenários] -> (https://github.com/FernandoIbaePLiborio/CadastroCliente/blob/main/DocFrontEnd.txt.docx)
 
 -----------------------------------------------------------------------------------------------------------------------------------
-* ![Angular](https://github.com/FernandoIbaePLiborio/CadastroCliente/blob/main/Front.gif)
+* ![Angular](https://github.com/FernandoIbaePLiborio/CadastroCliente/blob/main/front.gif)
 -----------------------------------------------------------------------------------------------------------------------------------
 * ![Service](https://github.com/FernandoIbaePLiborio/CadastroCliente/blob/main/service.gif)
 
