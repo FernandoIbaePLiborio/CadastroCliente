@@ -26,7 +26,6 @@ export class ClienteFormComponent implements OnInit {
         console.log(response);
         this.success = response.ok;
         this.message = response.mensagem;
-        this.limpar();
       }, error => {
         console.log(error)
         this.message = error;
@@ -38,7 +37,4 @@ export class ClienteFormComponent implements OnInit {
     this.router.navigate(['/clientes'])
   }
 
-  limpar() {
-    this.cliente = new Cliente();
-  }
 }
