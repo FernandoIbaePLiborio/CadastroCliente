@@ -1,7 +1,7 @@
 # Funcionalidade -> CadastroCliente
 
 -----------------------------------------------------------------------------------------------------------------------------------
-### Back-End -> 
+### Back-End 
 * Java jdk 1.8 -> Jersey Rest -> JPA -> Drive ojdbc8-12.2.0.1.jar
 -----------------------------------------------------------------------------------------------------------------------------------
 * [Back End Master](https://github.com/FernandoIbaePLiborio/Cliente/tree/master) 
@@ -13,7 +13,7 @@
 * [Dependências](https://github.com/FernandoIbaePLiborio/CadastroCliente/blob/main/Cliente/pom.xml) 
 
 -----------------------------------------------------------------------------------------------------------------------------------
-### Front-End -> 
+### Front-End 
 -----------------------------------------------------------------------------------------------------------------------------------
 * [Front End Master](https://github.com/FernandoIbaePLiborio/CadastroCliente/tree/master)  
 * [Diretivas | Cenários](https://github.com/FernandoIbaePLiborio/CadastroCliente/blob/main/DocFrontEnd.txt.docx)
