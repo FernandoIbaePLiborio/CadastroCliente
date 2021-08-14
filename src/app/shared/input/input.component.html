@@ -1,0 +1,7 @@
+<div class="form-group">
+    <div [ngClass]="{'is-valid' : sucesso(), 'is-invalid' : erro()}"></div>
+    <label>{{ label }}</label>
+    <ng-content></ng-content>
+    <span *ngIf="erro()" class="invalid-feedback">{{ errorMessage }}</span>
+    <span *ngIf="sucesso()" class="valid-feedback">Ok</span>
+</div>

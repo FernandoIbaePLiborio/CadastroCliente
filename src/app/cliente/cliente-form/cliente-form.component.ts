@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { MaskDirective, NgxMaskModule } from 'ngx-mask';
 import { ClienteService } from 'src/app/cliente.service';
 import { Cliente } from '../cliente';
 
@@ -10,25 +12,35 @@ import { Cliente } from '../cliente';
 })
 export class ClienteFormComponent implements OnInit {
 
-  cliente: Cliente;
+  clienteForm: FormGroup
+  cliente: Cliente
+  success: boolean
+  message: string
+  lettersAndNumbers = /^[A-Za-z0-9ñÑáéíóúÁÉÍÓÚ ]+$/
 
-  success: boolean;
-  message: string;
-  constructor(private service : ClienteService, private router : Router) {
+  constructor(private service : ClienteService, private router : Router, private formBuilder: FormBuilder) {
     this.cliente = new Cliente();
   }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    this.clienteForm = this.formBuilder.group({
+      nome: this.formBuilder.control('', [Validators.pattern('^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$'), Validators.required, Validators.minLength(4)]),
+      cpf: this.formBuilder.control('', [Validators.required]),
+      telefone: this.formBuilder.control('', [Validators.required])
+    })
+   }
 
-  onSubmit() {
-    this.service.salvar(this.cliente)
-      .subscribe(response => {
-        console.log(response);
-        this.success = response.ok;
-        this.message = response.mensagem;
+  salvar(cliente: Cliente) {
+    console.log(cliente)
+    this.service.salvar(cliente).subscribe(response => {
+        console.log(response)
+        this.success = response.ok
+        this.message = response.mensagem
+        this.clienteForm.reset()
       }, error => {
         console.log(error)
-        this.message = error;
+        this.success = false
+        this.message = error
       }
     )
   }

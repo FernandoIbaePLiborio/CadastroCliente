@@ -23,7 +23,7 @@ import { NgxMaskModule } from 'ngx-mask';
     TemplateModule,
     ClienteModule,
     NgxMaskModule.forRoot({
-      dropSpecialCharacters: true
+      dropSpecialCharacters: false
     })
   ],
   providers: [],
