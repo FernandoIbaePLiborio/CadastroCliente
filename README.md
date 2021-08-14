@@ -22,5 +22,7 @@
 * ![Angular](https://github.com/FernandoIbaePLiborio/CadastroCliente/blob/main/front.gif)
 -----------------------------------------------------------------------------------------------------------------------------------
 * ![Service](https://github.com/FernandoIbaePLiborio/CadastroCliente/blob/main/service.gif)
+-----------------------------------------------------------------------------------------------------------------------------------
+* ![Exception](https://github.com/FernandoIbaePLiborio/CadastroCliente/blob/main/exception.gif)
 
 
