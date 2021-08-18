@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ClienteService } from 'src/app/cliente.service';
-import { Cliente } from '../cliente';
-import { ClienteColecao } from '../clienteColecao';
+import { ClienteColecao } from '../clienteColecao.model';
 
 @Component({
   selector: 'app-clientes',
@@ -19,13 +18,11 @@ export class ClientesComponent implements OnInit {
     this.service.pesquisar()
       .subscribe(response => {
         this.clientes = response.colecao;
-        console.log(response)
       }, error => console.log(error))
   }
  
   async myMethod(){
     let data = await this.service.pesquisar();
-    console.log(data);
    }
 
   cadastro() {

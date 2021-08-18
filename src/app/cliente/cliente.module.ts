@@ -6,14 +6,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ClientesComponent } from './clientes/clientes.component';
 import { NgxMaskModule } from 'ngx-mask';
 import { InputComponent } from '../shared/input/input.component';
+import { AlertComponent } from '../shared/alert/alert.component';
 
 
 @NgModule({
   declarations: [
     ClienteFormComponent,
     ClientesComponent,
-    InputComponent
-    
+    InputComponent,
+    AlertComponent
   ],
   imports: [
     CommonModule,
@@ -26,7 +27,8 @@ import { InputComponent } from '../shared/input/input.component';
     ClienteFormComponent,
     ClientesComponent,
     InputComponent,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AlertComponent
   ]
 })
 export class ClienteModule { }

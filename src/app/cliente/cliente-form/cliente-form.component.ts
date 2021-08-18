@@ -3,7 +3,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { MaskDirective, NgxMaskModule } from 'ngx-mask';
 import { ClienteService } from 'src/app/cliente.service';
-import { Cliente } from '../cliente';
+import { Alert } from 'src/app/shared/alert/alert.model';
+import { Cliente } from '../cliente.model';
 
 @Component({
   selector: 'app-cliente-form',
@@ -12,13 +13,14 @@ import { Cliente } from '../cliente';
 })
 export class ClienteFormComponent implements OnInit {
 
+  lettersAndNumbers = /^[A-Za-z0-9ñÑáéíóúÁÉÍÓÚ ]+$/
   clienteForm: FormGroup
   cliente: Cliente
   success: boolean
   message: string
-  lettersAndNumbers = /^[A-Za-z0-9ñÑáéíóúÁÉÍÓÚ ]+$/
+  alerta: Alert
 
-  constructor(private service : ClienteService, private router : Router, private formBuilder: FormBuilder) {
+  constructor(private service: ClienteService, private router: Router, private formBuilder: FormBuilder) {
     this.cliente = new Cliente();
   }
 
@@ -28,21 +30,27 @@ export class ClienteFormComponent implements OnInit {
       cpf: this.formBuilder.control('', [Validators.required]),
       telefone: this.formBuilder.control('', [Validators.required])
     })
-   }
+  }
 
   salvar(cliente: Cliente) {
-    console.log(cliente)
-    this.service.salvar(cliente).subscribe(response => {
-        console.log(response)
+    this.service.salvar(cliente).subscribe(
+      response => {
         this.success = response.ok
         this.message = response.mensagem
-        this.clienteForm.reset()
+        if (this.success) {
+          this.clienteForm.reset()
+        }
       }, error => {
-        console.log(error)
         this.success = false
         this.message = error
       }
     )
+  }
+
+  alertaSucessoErro() {
+    return this.alerta = this.success ? 
+        { mensagem: "Cliente Salvo com Sucesso!", classeAlerta: "alert alert-success" } 
+        : { mensagem: this.message, classeAlerta: "alert alert-danger" }
   }
 
   voltar() {
